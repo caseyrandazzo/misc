@@ -766,11 +766,6 @@
 
 <script>
   (function() {
-    /* ============================================================
-       EMAIL DELIVERY — replace ACCESS_KEY before sharing.
-       Sign up at https://web3forms.com (~2 min, free, no card).
-       Paste the access key they email you in place of the value below.
-       ============================================================ */
     const WEB3FORMS_KEY = '47b06068-92c0-499d-b7e7-1bb266f4a37c';
     const RECIPIENT_NAME = 'Casey';
 
@@ -883,7 +878,7 @@
     submitBtn.addEventListener('click', async () => {
       if (!currentResults) return;
 
-      // Friendly check that Casey replaced the placeholder
+      //placeholder check
       if (WEB3FORMS_KEY === '47b06068-92c0-499d-b7e7-1bb266f4a37c' || !WEB3FORMS_KEY) {
         submitHint.textContent = "Submission isn't set up yet — the host needs to add the email key to this file.";
         submitHint.className = 'answers__hint is-error';
