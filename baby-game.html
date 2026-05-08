@@ -805,11 +805,6 @@
 
 <script>
   (function() {
-    /* ============================================================
-       EMAIL DELIVERY — replace ACCESS_KEY before sharing.
-       Sign up at https://web3forms.com (~2 min, free, no card).
-       Paste the access key they email you in place of the value below.
-       ============================================================ */
     const WEB3FORMS_KEY = 'cab9f78a-d28f-4daa-b09e-3c29cdfd1a5e';
     const RECIPIENT_NAME = 'Casey';
 
@@ -958,7 +953,7 @@
         if (data.success) {
           submitBtn.textContent = '✓ Submitted';
           submitBtn.classList.add('is-disabled');
-          submitHint.textContent = "Thanks! Your guesses are on their way to " + RECIPIENT_NAME + ".";
+          submitHint.textContent = "Thanks for playing!";
           submitHint.className = 'answers__hint is-success';
           showToast('Submitted!');
         } else {
@@ -967,7 +962,7 @@
       } catch (err) {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Try again';
-        submitHint.textContent = "Sorry, something went wrong. Please try again, or text your results to " + RECIPIENT_NAME + ".";
+        submitHint.textContent = "Something went wrong. Please try again or email your results to " + RECIPIENT_NAME + ".";
         submitHint.className = 'answers__hint is-error';
       }
     });
